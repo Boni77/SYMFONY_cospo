@@ -1,0 +1,169 @@
+body{
+    background-color: rgb(255, 255, 255);
+    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.wrapper{
+    margin-left : 150px;
+    margin-right: 150px;
+}
+
+/* --- LIEN --- */
+
+a:link {
+    color: rgb(0, 0, 0);
+}
+
+a:visited {
+    color: #000000;
+}
+
+  a:hover {
+    color: #ffc83e;
+}
+
+  a:active {
+    color: #ffc83e;
+}
+
+/* --- FIN LIEN --- */
+
+/* --- TABLE --- */
+
+td, th {
+    padding: 15px;
+    border-bottom: 1px white solid;
+  }
+   th {
+    background: #353c42;
+    color: white;
+    padding: 10px;
+  }
+
+/* --- FIN TABLE --- */
+
+/* --- COLOR DIV ICON --- */
+
+.orange{
+    color: orange;
+    text-align: center;
+}
+
+.rouge{
+    color: red;
+    text-align: center;
+}
+
+.vert{
+    color: green;
+    text-align: center;
+}
+
+/* --- FIN COLOR DIV ICON --- */
+
+/* --- NAV --- */
+
+nav{
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom : 1px solid rgb(175, 175, 175);
+  background-color: white;
+  color: black;
+}
+
+#link {
+  display: none;
+}
+
+.list{
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  
+}
+
+.list.active{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.connexion.active{
+  display: block;
+}
+
+
+@media(max-width: 768px){
+
+  header{
+      display: flex;
+      justify-content: right;
+  }
+
+a {color:inherit}
+
+#burger {
+width:30px;
+height:2px;
+background:white;
+display:inline-block;
+position:relative;
+}
+#burger::before,
+#burger::after {
+content:'';
+width:30px;
+height:2px;
+background:white;
+display:inline-block;
+position:absolute;
+transform-origin: center;
+transition: all 0.3s ease;
+}
+#burger::before {
+top:-7px;
+}
+#burger::after {
+top:7px;
+}
+
+#burger.open {
+background:transparent;
+}
+#burger.open::before {
+transform: rotate(45deg);
+top:0;
+}
+#burger.open::after {
+transform: rotate(-45deg);
+top:0;
+}
+
+#link {
+display: block;
+position: absolute;
+left: 1rem;
+}
+
+.list, .connexion{
+display: none;
+list-style: none;
+text-transform: uppercase;
+}
+
+nav{
+display: flex;
+flex-direction: column;
+}
+
+header{
+display: grid;
+justify-content: center;
+}
+}
+
+/* --- NAV --- */
+
