@@ -18,39 +18,34 @@
 		{% endblock %}
 	</head>
 
-	<header>
-		<nav>
-			<a id="link" href="#">
-				<span id="burger"></span>
-			</a>
-      
-      <ul class="list">
+	
+
+
+<div class="container">
+  <header>
+    <h2><a href="{{ path('app_accueil')}}" title="sport">COSPO</a></h2>
+    <nav>
+      <ul>
         <li>
-          <a href="{{ path('app_accueil')}}">ACCUEIL</a>
+          <a href="{{ path('app_accueil')}}" title="accueil">Accueil</a>
         </li>
         <li>
-          <a href="#">PROFIL</a>
+          <a href="#" title="profil">Profil</a>
+        </li>
+		        <li>
+          <a href="#" title="contact">Contact</a>
+        </li>
+        <li>
+          <a href="{{ path('app_register')}}" title="inscription">Inscription</a>
+        </li>
+		<li>
+          <a href="{{ path('app_login')}}" title="connexion">Connexion</a>
         </li>
       </ul>
-   
-			<div class="nav-right">
-				{% if app.user %}
-					<img src="img\namaste.png" width="40px">
-					Bienvenue
-					{{ app.user.pseudo }}
-					<a class="nav-link" href="{{ path('app_logout')}}">
-						<div class="rouge">Deconnexion
-							<i class="fa-solid fa-arrow-right-from-bracket"></i>
-						</div>
-					</a>
+    </nav>
+  </header>
+</div>
 
-				{% else %}
-					<a href="{{ path('app_login')}}">Connexion |</a>
-					<a href="{{ path('app_register')}}">Inscription</a>
-				{% endif %}
-			</div>
-		</nav>
-	</header>
 
 	<body>
 		<div class="wrapper"> {% block body %}{% endblock %}
