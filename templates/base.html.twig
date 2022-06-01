@@ -27,20 +27,27 @@
     <nav>
       <ul>
         <li>
-          <a href="{{ path('app_accueil')}}" title="accueil">Accueil</a>
+          <a href="{{ path('app_accueil')}}" title="Accueil">Accueil</a>
         </li>
-        <li>
-          <a href="#" title="profil">Profil</a>
+		 <li>
+          <a href="#" title="Contact">Contact</a>
         </li>
+		{% if app.user %}
 		        <li>
-          <a href="#" title="contact">Contact</a>
-        </li>
-        <li>
-          <a href="{{ path('app_register')}}" title="inscription">Inscription</a>
+          <a href="{{ path('show_profil', {'id': app.user.id }) }}" title="Profil">Profil</a>
         </li>
 		<li>
-          <a href="{{ path('app_login')}}" title="connexion">Connexion</a>
+          <a href="{{ path('app_logout')}}" title="Deconnexion"><div class="rouge"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+						</div></a>
         </li>
+		{% else %}
+        <li>
+          <a href="{{ path('app_register')}}" title="Inscription">Inscription</a>
+        </li>
+		<li>
+          <a href="{{ path('app_login')}}" title="Connexion">Connexion</a>
+        </li>
+		{% endif %}
       </ul>
     </nav>
   </header>

@@ -3,10 +3,6 @@ body {
   background-image: linear-gradient(to bottom right, #f0a730, #ffcb78);
 }
 
-.wrapper{
-  margin-left : 150px;
-  margin-right: 150px;
-}
 
 /* --- SECTION 1 ACCUEIL --- */
 
@@ -303,12 +299,10 @@ td, th {
 
 /* INSCRIPTION */
 
-.box{
- 
+.wrapperRegister{
   display: flex;
- 
+  justify-content: center;
 }
-
 
 /* FIN INSCRIPTION */
 
@@ -319,3 +313,292 @@ td, th {
 
 
 /* FIN CONNEXION */
+
+
+/* PROFIL */
+
+
+
+.right, .left {
+  display: inline-block;
+}
+
+
+
+.right {
+  width: 375px;
+  margin-left: 42px;
+}
+
+.top, .bottom {
+  background-color: rgba(255, 255, 255, 0.81);
+  box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.35);
+}
+
+.pseudo{
+  text-align: center;
+}
+
+.bottom {
+  margin-top: 42px;
+}
+
+
+.bg-profile {
+  background: url("http://i0.kym-cdn.com/photos/images/original/001/219/959/b61.png") top;
+  background-size: cover;
+  height: 95px;
+  width: 250px;
+  margin-left: 0px;
+}
+
+.pic-profile {
+  width: 115px;
+  position: relative;
+  top: -60px;
+  left: 65px;
+  border-radius: 80px;
+  border: 2px solid #fff;
+}
+
+.badge {
+  width: 35px;
+  height: 35px;
+  background-image: url("https://image.noelshack.com/fichiers/2017/38/2/1505832979-itpt-wow-horde-raglan-dd.png");
+  background-size: cover;
+  position: relative;
+  top: -180px;
+  left: 55px;
+  border-radius: 50px;
+  border: 1px solid #ff7373;
+}
+
+.profil img{
+  width: 20px;
+  position: absolute;
+  bottom: 18px;
+  left: 25px;
+}
+
+.profil span{
+  cursor: pointer;
+  color: #848eab;
+  position: absolute;
+  bottom: 8px;
+  font-size: 9pt;
+  left: 58px;
+  padding: 12px 32px 12px 0;
+  border-right: 2px solid #e4e9ef;
+}
+
+.trophy img {
+  width: 20px;
+  position: absolute;
+  bottom: 18px;
+  left: 145px;
+}
+
+.trophy span {
+  cursor: pointer;
+  color: #848eab;
+  position: absolute;
+  bottom: 12px;
+  font-size: 9pt;
+  left: 177px;
+  padding: 8px 28px 8px 0;
+}
+
+.left .bottom {
+  position: relative;
+  top: -6px;
+  height: 360px;
+}
+
+.level h4 {
+  color: #8f8f8f;
+  font-size: 10pt;
+  font-weight: 300;
+  margin-left: 80px;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+.level span {
+  float: right;
+  margin-right: 35px;
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+.warrior img {
+  width: 30px;
+  position: absolute;
+  top: 70px;
+  left: 25px;
+}
+
+.hunter img {
+  width: 30px;
+  position: absolute;
+  top: 130px;
+  left: 25px;
+}
+
+.mage img {
+  width: 30px;
+  position: absolute;
+  top: 183px;
+  left: 25px;
+}
+
+.priest img {
+  width: 30px;
+  position: absolute;
+  top: 238px;
+  left: 25px;
+}
+
+.play {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  top: 14px;
+  padding: 13px 30px;
+  width: 130px;
+  margin-left: 29px;
+  border: 1px solid #86baff;
+  color: #86baff;
+  font-size: 10pt;
+}
+
+.right .top {
+  position: relative;
+  top: -135px;
+  height: 329px;
+}
+
+h1 {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12pt;
+  font-weight: 400;
+  color: #888;
+}
+
+.skills {
+	float: left;
+	clear: right;
+	width: 100%;
+	margin: 20px 0px 30px 30px;
+}
+
+.skillsTop {
+	float: left;
+	clear: right;
+	width: 100%;
+	margin: 5px 0 3px 0;
+  font-size: 10pt;
+	text-align: left;
+	font-weight: 600;
+  color: #8f8f8f;
+  font-weight: 300;
+}
+
+.skillsBottom {
+	float: left;
+	clear: right;
+	width: 75%;
+	margin: 2px 0px 15px 0px;
+}
+
+.progress {
+	background:#e1e1e1; 
+	height:8px;
+}
+
+.progress-bar {
+	height:100%;
+}
+
+.skillsTop span {
+  float:right; 
+  margin-right: 15%;
+  position: relative;
+  top: 16px;
+  font-weight: 500;
+}
+
+.pvp{width: 62%;background-color: #ff7676;}
+.pvp-number, .loss, .mage span {color:#ff7676 !important;}
+.farming{width: 45%;background-color: #53e69d;}
+.farm-number, .win, .hunter span {color:#53e69d !important;}
+.victories {width: 91%;background-color: #ffe685;}
+.vic-number, .priest span {color:#ffe685;}
+.supporting {width: 77%; background-color: #76b1ff;}
+.sup-number, .warrior span {color:#76b1ff;}
+
+.fa-circle-thin {
+  cursor: pointer;
+  position: relative;
+  top: 185px;
+  right: 280px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.fa-circle-thin span {
+  font-size: 9pt;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+.right .bottom {
+  height: 250px;
+  position: relative;
+  top: -136px;
+}
+
+.setting {
+  width: 20px;
+  position: relative;
+  bottom: 30px;
+  left: 335px;
+  cursor: pointer;
+}
+
+.matches {
+  width: 85%;
+  margin-left: 7.5%;
+}
+
+
+.matches td {
+  font-size: 9pt;
+  padding-bottom: 18px !important;
+  color: #8f8f8f;
+}
+
+.wl {
+  font-weight: 500;
+  float: left;
+}
+
+.date {
+  font-weight: 400;
+  text-align: center;
+}
+
+.time {
+  font-weight: 500;
+  float: right;
+}
+
+.view-more {
+  float: right;
+  cursor: pointer;
+  color: #86baff;
+  font-size: 10pt;
+  margin-right: 7.5%;
+}
+
+/* FIN PROFIL */

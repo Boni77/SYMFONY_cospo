@@ -47,7 +47,7 @@ class RegistrationFormType extends AbstractType
             ])
             ->add('ville', CountryType::class, [
                 'required' => true,
-                'label' => 'Dans quelle ville habitez-vous ?',
+                'label' => 'Dans quelle ville de France habitez-vous ?',
                 'attr' => [
                     'placeholder' => 'Tapez et choississez une localisation',
                 ],

@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <div class="left">
+    
+    <div class="top profile">
+      <div class="bg-profile">
+      </div>
+      <img src="https://i.ibb.co/pxvkv6Z/download.jpg" class="pic-profile"/>
+      
+      <div class="profil">
+       <img src="https://cdn-icons-png.flaticon.com/512/7011/7011411.png"/>
+        <span>Stats</span>
+      </div>
+      <div class="trophy">
+         <img src="https://cdn-icons-png.flaticon.com/512/7011/7011471.png"/>
+        <span>Trophies</span>
+      </div>
+    </div>
+    <div class="bottom">
+      <h1>INFORMATION</h1>
+      <div class="level warrior">
+        <h4><i class="fa-solid fa-user"></i> {{ app.user.pseudo }}</h4>
+      </div>
+        <div class="level priest">
+        <h4><i class="fa-solid fa-venus-mars"></i> {{ app.user.sexe }}</h4>
+      </div>
+      <div class="level hunter">
+        <h4><i class="fa-solid fa-cake-candles"></i> {{ app.user.age }} ans</h4>
+      </div>
+      <div class="level mage">
+        <h4><i class="fa-solid fa-location-dot"></i> {{ app.user.ville }}</h4>
+      </div>
+      <p class="play">Play Now</p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="top stats">
+      <h1>Sport</h1>
+      <div class="skills">
+      <h3 class="skillsTop">PVP <span class="pvp-number">62</span></h3>
+     <div class="skillsBottom">
+      <div class="progress">
+        <div class="pvp progress-bar progress-bar-info" role="progressbar">
+        </div>
+      </div>
+     </div>
+     <h3 class="skillsTop">Farming <span class="farm-number">48</span></h3>
+     <div class="skillsBottom">
+      <div class="progress">
+        <div class="farming progress-bar progress-bar-info" role="progressbar">
+        </div>
+      </div>
+    </div>
+    <h3 class="skillsTop">Victories <span class="vic-number">91</span></h3>
+    <div class="skillsBottom">
+      <div class="progress">
+        <div class="victories progress-bar progress-bar-info" role="progressbar" ></div>
+      </div>
+    </div>
+    <h3 class="skillsTop">Supporting <span class="sup-number">77</span></h3>
+    <div class="skillsBottom">
+      <div class="progress">
+        <div class="supporting progress-bar progress-bar-info" role="progressbar">
+        </div>
+      </div>
+    </div>
+</div>
+
+    {% for sport in app.user.sport %}
+        {{ sport.libelle }} <br>
+    {% endfor %}
+
+    </div>
+    <div class="bottom">
+      <h1>Evenement</h1>
+      <img class="setting" src="https://cdn-icons-png.flaticon.com/512/4036/4036398.png"/>
+      <table class="matches">
+        <tr>
+          <td class="wl win">Win</td>
+          <td class="date">20/09/2017 19:35</td> 
+          <td class="time">24:19</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
