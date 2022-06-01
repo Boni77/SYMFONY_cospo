@@ -1,4 +1,12 @@
+   
+body {
+  background-image: linear-gradient(to bottom right, #f0a730, #ffcb78);
+}
 
+.wrapper{
+  margin-left : 150px;
+  margin-right: 150px;
+}
 
 /* --- SECTION 1 ACCUEIL --- */
 
@@ -293,6 +301,17 @@ td, th {
 
 /* --- NAV --- */
 
+/* INSCRIPTION */
+
+.box{
+ 
+  display: flex;
+ 
+}
+
+
+/* FIN INSCRIPTION */
+
 
 
 /* CONNEXION */
@@ -300,4 +319,3 @@ td, th {
 
 
 /* FIN CONNEXION */
-

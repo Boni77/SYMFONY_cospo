@@ -1,5 +1,4 @@
 {% extends 'base.html.twig' %}
-{% form_theme registrationForm 'bootstrap_4_layout.html.twig' %}
 
 {% block title %}Inscription{% endblock %}
 
@@ -8,13 +7,19 @@
         <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
     {% endfor %}
 
-    <h1>Inscription</h1>
+<div class ="box">
 
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.sexe) }}
-        {{ form_row(registrationForm.age) }}
-        {{ form_row(registrationForm.ville) }}
+    <h1>Inscription</h1>
+    <h5>1. Quel sport voulez-vous pratiquer ou pratiquez-vous ?</h5>
+    {{ form_row(registrationForm.sport) }}
+    <h5>2. Pour bien vous correspondre nous avons besoin d'informations</h5>
+    {{ form_row(registrationForm.sexe) }}
+    {{ form_row(registrationForm.age) }}
+    {{ form_row(registrationForm.ville) }}
         {{ form_row(registrationForm.pseudo) }}
+        {{ form_errors(registrationForm.pseudo) }}
+    <h5>3. Presque terminé. Comment voulez-vous vous connecter?</h5>
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
             label: 'Password'
@@ -23,4 +28,5 @@
 
         <button type="submit" class="btn">Register</button>
     {{ form_end(registrationForm) }}
+</div>
 {% endblock %}

@@ -86,11 +86,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $creation;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Club::class, inversedBy="users")
-     */
-    private $club;
-
-    /**
      * @ORM\ManyToMany(targetEntity=Sport::class, inversedBy="users")
      */
     private $sport;
@@ -109,6 +104,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="integer")
      */
     private $age;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Sport::class, inversedBy="users")
+     */
+    private $PracticeSport;
 
     public function __construct()
     {
@@ -360,18 +360,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $creation->setUserCreation(null);
             }
         }
-
-        return $this;
-    }
-
-    public function getClub(): ?Club
-    {
-        return $this->club;
-    }
-
-    public function setClub(?Club $club): self
-    {
-        $this->club = $club;
 
         return $this;
     }
